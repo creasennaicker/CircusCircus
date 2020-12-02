@@ -1,9 +1,27 @@
 from flask_login import UserMixin
 import re
 import datetime
+from flask_login.login_manager import LoginManager
 from werkzeug.security import generate_password_hash, check_password_hash
 
-from forum.app import db 
+from forum.app import db, app 
+
+
+login_manager = LoginManager()
+login_manager.init_app(app)
+
+# if __name__ == "__main__":
+# 	#runsetup()
+# 	port = int(os.environ["PORT"])
+# 	app.run(host='0.0.0.0', port=port, debug=True)
+
+
+
+#DATABASE STUFF
+@login_manager.user_loader
+def load_user(userid):
+	return User.query.get(userid)
+
 
 password_regex = re.compile("^[a-zA-Z0-9!@#%&]{6,40}$")
 username_regex = re.compile("^[a-zA-Z0-9!@#%&]{4,40}$")
