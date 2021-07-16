@@ -3,6 +3,19 @@ This is a minimal forum written in python with Flask. It supports only the bare 
 
 On first run, the default subforums will be created. Although custom subforums are not supported through any user interface, it is possible to modify forum/setup.py to create custom subforums.
 
+## Features to Add
+
+- comments on each post (many comments to one post)
+- like/dislike/heart/etc emojis on posts
+- direct messages from one user to another
+- insert pix links and/or video links
+- a nice style based on Bootstrap
+- user settings
+- public/private posts
+  - public posts can be seen by people not logged in
+  - private posts can only be seen by users logged in
+- posts can be plain text or markdown
+
 ## Changes in 2020
 
 I had to make a bunch of changes in this code to get it running. Took far longer than it should.
