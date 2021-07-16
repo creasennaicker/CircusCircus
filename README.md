@@ -10,6 +10,8 @@ On first run, the default subforums will be created. Although custom subforums a
 - direct messages from one user to another
 - insert pix links and/or video links
 - a nice style based on Bootstrap
+  - a logo on every page
+  - copyright, about etc on footer of each page
 - user settings
 - public/private posts
   - public posts can be seen by people not logged in
